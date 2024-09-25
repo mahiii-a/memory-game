@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("background.webp");
+    background-size: cover;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#timer, #score {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s;
+}
+
+#timer:hover, #score:hover {
+    background-color: #e0e0e0;
+}
+
+.game {
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background: #07506d;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+.card.earth .back {
+    background-image: url("earth.png");
+}
+.card.mercury .back {
+    background-image: url("mercury.png");
+}
+.card.venus .back {
+    background-image: url("venus.png");
+}
+.card.mars .back {
+    background-image: url("mars.png");
+}
+.card.jupiter .back {
+    background-image: url("jupiter.png");
+}
+.card.saturn .back {
+    background-image: url("saturn.png");
+}
+.card.uranus .back{
+    background-image: url("uranus.png");
+}
+.card.neptune .back{
+    background-image: url("neptune.png");
+}
+
+
+.card .back {
+    transform: rotateY(180deg);
+  
+}
+
+.card .front {
+    background-image: url("card-front.jpg");
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+
